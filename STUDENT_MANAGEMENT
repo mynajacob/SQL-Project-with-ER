@@ -1,0 +1,362 @@
+STUDENT RECORD MANAGEMENT PROJECT:
+
+STUDENTS TABLE:
+create table students(
+student_id int primary key,
+student_name varchar2(100) not null,
+DOB date,
+email varchar2(50) unique
+);
+
+COURSE TABLE:
+create table courses(
+course_id int primary key,
+course_name varchar2(100),
+credits int default(3)
+);
+
+ENROLLMENTS TABLE:
+create table enrollments(
+enrollment_id int primary key,
+student_id int not null,
+course_id int not null,
+marks number(3),
+grade char(2),
+foreign key (student_id) references students(student_id),
+foreign key (course_id) references courses(course_id)
+);
+
+INSERTING INTO STUDENTS:
+insert into students(student_id,student_name,DOB,email)
+values(1,'priyanka','30-10-2003','priya@gmail.com');
+insert all 
+into students(student_id,student_name,DOB,email)
+values(2,'jack','27-05-1998','jack@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(3,'meena','07-05-1999','meena@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(4,'kavin','07-08-2000','kavin@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(5,'arun','12-08-2002','arun@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(6,'kavitha','16-06-2002','kavitha@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(7,'abinaya','06-08-2001','abinaya@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(8,'sameer','18-09-2001','sameer@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(9,'harini','23-09-2002','harini@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(10,'kishore','27-09-2003','kishore@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(11,'aravindh','25-06-2003','aravindh@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(12,'brindha','24-08-2004','brindha@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(13,'kaviya','11-05-2003','kaviya@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(14,'arjun','14-03-2001','arjun@gmail.com')
+into students(student_id,student_name,DOB,email)
+values(15,'prashanth','17-05-1998','prashanth@gmail.com')
+select * from dual;
+select * from students;
+INSERTING INTO COURSES:
+
+insert all
+into courses(course_id,course_name,credits)
+values(101,'SQL',3)
+into courses(course_id,course_name,credits)
+values(102,'PL/SQL',3)
+into courses(course_id,course_name,credits)
+values(103,'JAVA',3)
+into courses(course_id,course_name,credits)
+values(104,'C#',3)
+into courses(course_id,course_name,credits)
+values(105,'C++',3)
+into courses(course_id,course_name,credits)
+values(106,'PYTHON',3)
+into courses(course_id,course_name,credits)
+values(107,'SQL',3)
+into courses(course_id,course_name,credits)
+values(108,'FULLSTACK',3)
+into courses(course_id,course_name,credits)
+values(109,'PL/SQL',3)
+into courses(course_id,course_name,credits)
+values(110,'BOOTSTRAP',3)
+into courses(course_id,course_name,credits)
+values(111,'EXCEL',3)
+into courses(course_id,course_name,credits)
+values(112,'SQL',3)
+into courses(course_id,course_name,credits)
+values(113,'PYTHON',3)
+into courses(course_id,course_name,credits)
+values(114,'JAVA',3)
+into courses(course_id,course_name,credits)
+values(115,'PL/SQL',3)
+SELECT *FROM dual;
+
+select * from courses;
+
+INSERTING IN ENROLLMENTS:
+
+insert all 
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(201,1,101,95,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(202,2,102,82,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(203,3,103,80,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(204,4,104,83,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(205,5,105,86,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(206,6,106,77,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(207,7,107,95,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(208,8,108,74,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(209,9,109,87,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(210,10,110,75,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(211,11,111,69,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(212,12,112,95,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(213,13,113,81,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(214,14,114,79,null)
+into enrollments(enrollment_id,student_id,course_id,marks,grade)
+values(215,15,115,99,null)
+select * from dual;
+select * from enrollments;
+UPDATE:
+update students
+set student_name ='gayathri',email='gayu@gmail.com'
+where student_id =8;
+DELETE :
+DELETE FROM enrollments
+WHERE enrollment_id =215;
+ORDER BY: DESC/ASC
+select * from students
+order by student_id desc;
+select * from students
+order by student_id ;
+BOTH ASC AND DESC:
+select student_id, student_name from students
+order by student_id asc,student_name desc;
+DISTINCT:
+select distinct course_name from courses;
+WHERE:
+select student_name from students
+where student_id =1;
+AND OPEREATOR:
+select * from courses
+where course_id like '1%' and course_name like 'S%';
+OR OPERATOR:
+select * from students
+where student_id like '1%' or student_id like '2%';
+ BOTH AND / OR OPERATOR:
+select * from students
+where DOB ='27-05-1998' and  (student_id like '1%' or student_id like '2%');
+BETWEEN OPERATOR:
+select * from enrollments
+where marks between 85 and 95;
+ALIASES:
+select student_id as id from students;
+TRUNCATE:
+truncate table students;
+DROP TABLE:
+drop table students;
+NOT OPEREATOR:
+select * from students
+where not student_id=2;
+IN OPERATOR:
+select * from students
+where student_id in (1 ,4);
+NOT IN OPERATOR:
+select * from students
+where student_id not in (1 ,4);
+ALTER [ADDING COLUMN]:
+alter table enrollments
+ add amount int;
+ALTER[MODIFY COLUMN]
+alter table enrollments
+modify amount decimal(10,2);
+ALTER[RENAME]
+alter table enrollments
+rename column amount to payment;
+ALTER[DROP]:
+alter table enrollments
+drop column payment;
+AGGREGATE FUNCTION:
+SUM:
+select sum(marks) from enrollments;
+MIN:
+select min(marks) from enrollments;
+MAX:
+select max(marks) from enrollments;
+AVG:
+select avg(marks) from enrollments;
+COUNT:
+select count(marks) from enrollments;
+GROUP BY:
+select enrollment_id,sum(marks) from enrollments
+group by enrollment_id;
+GROUP BY AND HAVING:
+EXAMPLE:1
+select enrollment_id,sum(marks) from enrollments
+group by enrollment_id
+having sum(marks)>=86;
+GROUP BY AND HAVING:
+EXAMPLE:2
+select student_id,min(marks)from enrollments
+group by student_id
+having min(marks)<80;
+GROUP BY AND ORDER BY:
+EXAMPLE:3
+select student_id,max(marks) from enrollments
+group by student_id
+order by max(marks) asc;
+GROUP BY AND ORDER BY:
+EXAMPLE:4
+select course_id,min(marks) from enrollments
+where student_id =2
+group by course_id;
+CREATE TABLE PAYMENTS:
+
+create  table payments(
+payment_id int primary key,
+student_id int,
+course_id int,
+amount decimal(10,2),
+payment_date date,
+payment_mode varchar2(20),
+foreign key (student_id) references students (student_id),
+foreign key (course_id) references courses(course_id)
+);
+JOINING TWO TABLES:
+select e.student_id,c.course_name,e.marks
+from enrollments e
+inner join courses c
+on c.course_id=e.course_id;
+select e.student_id,c.course_name,e.marks
+from enrollments e
+right join courses c
+on c.course_id=e.course_id;
+LEFT JOIN:
+select e.student_id,c.course_name,e.marks
+from enrollments e
+left join courses c
+on c.course_id=e.course_id
+select e.student_id,c.course_name,e.marks
+from enrollments e
+full join courses c
+on c.course_id=e.course_id;
+UNION :
+select course_id from courses
+union 
+select marks from enrollments;[NOTE: every distinct  value are taken and generate output in one column and must be same data type]
+UNION ALL:
+select course_id from courses
+union 
+select marks from enrollments;[NOTE:To allow duplicate value similar to union]
+INSERTING TO PAYMENT  TABLE:
+insert all
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(1,1,101,9000,date '2025-03-22','card')
+  into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(2,2,102,10000,date '2025-03-27','cash')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(3,3,103,7000,date '2025-04-29','cash')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(4,4,104,5000,date '2025-04-24','UPI')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(5,5,105,7000,date '2025-04-30','UPI')
+  into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(6,6,106,9000,date '2025-07-12','card')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(7,7,107,8000,date '2025-07-11','cash')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(8,8,108,8000,date '2025-08-17','card')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(9,9,109,10000,date '2025-06-16','UPI')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(10,10,110,4000,date '2025-06-13','UPI')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(11,11,111,4000,date '2025-05-22','cash')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(12,12,112,8000,date '2025-06-30','card')
+ into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(13,13,113,9000,date '2025-04-15','UPI')
+  into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(14,14,114,7000,date '2025-07-04','cash')
+  into payments(payment_id,student_id,course_id,amount,payment_date,payment_mode)
+ values(15,15,115,10000,date '2025-08-07','UPI')
+ select *  from dual;
+ SHOW STUDENTS WITH COURSE AND AMOUNT PAID:
+select s.student_name,c.course_name,sum(p.amount) as total_amount
+ from payments p
+inner join students s
+ on s.student_id = p.student_id
+inner join courses c
+on c.course_id= p.course_id
+group by s.student_name,c.course_name;
+EXAMPLE:
+select s.student_name,c.course_name,sum(p.amount) as total_amount
+ from payments p
+inner join students s
+ on s.student_id = p.student_id
+inner join courses c
+on c.course_id= p.course_id
+group by s.student_name,c.course_name
+order by sum(p.amount) desc;
+INDEX:
+create index index_name on students(student_name);
+VIEW:
+create view studentperformance as 
+select s.student_name,c.course_name,e.marks,e.grade
+from students s
+join enrollments e on s.student_id=e.student_id
+join courses c on e.course_id=c.course_id;
+select * from studentperformance;
+PROCEDURE:
+create or replace procedure assign_grades 
+is
+begin
+update enrollments
+set grade =case
+when marks>= 90 then 'A'
+when marks>=80 then 'B'
+when marks>=70 then 'C'
+when marks>=65 then 'D'
+else 'F'
+end;
+end;
+/
+
+TRIGGER:
+CREATE OR REPLACE TRIGGER
+trg_assign_grades
+BEFORE INSERT OR UPDATE ON ENROLLMENTS
+FOR EACH ROW
+BEGIN
+ IF :NEW.MARKS >=90 THEN
+    :NEW.GRADE := 'A';
+   ELSIF  :NEW.MARKS >=80 THEN
+    :NEW.GRADE := 'B';
+    ELSIF  :NEW.MARKS >=70 THEN
+    :NEW.GRADE := 'C';
+     ELSIF  :NEW.MARKS >=65 THEN
+    :NEW.GRADE := 'D';
+    ELSE
+    :NEW.GRADE :='F';
+    END IF;
+    END;
+    /
+update enrollments
+set marks=85
+where student_id=1;
+select * from enrollments;
