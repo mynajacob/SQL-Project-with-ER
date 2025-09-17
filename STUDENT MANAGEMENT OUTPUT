@@ -1,0 +1,300 @@
+UPDATE:
+s_id          s_name      DOB        Email
+1	priyanka	30-10-03	priya@gmail.com
+2	jack	27-05-98	jack@gmail.com
+3	meena	07-05-99	meena@gmail.com
+4	kavin	07-08-00	kavin@gmail.com
+5	arun	12-08-02	arun@gmail.com
+6	kavitha	16-06-02	kavitha@gmail.com
+7	abinaya	06-08-01	abinaya@gmail.com
+8	gayathri	18-09-01	gayu@gmail.com
+9	harini	23-09-02	harini@gmail.com
+10	kishore	27-09-03	kishore@gmail.com
+11	aravindh	25-06-03	aravindh@gmail.com
+12	brindha	24-08-04	brindha@gmail.com
+13	kaviya	11-05-03	kaviya@gmail.com
+14	arjun	14-03-01	arjun@gmail.com
+15	prashanth	17-05-98	prashanth@gmail.com
+ORDER BY: DESC/ASC
+s_id          s_name      DOB        Email
+15	prashanth	17-05-98	prashanth@gmail.com
+14	arjun	14-03-01	arjun@gmail.com
+13	kaviya	11-05-03	kaviya@gmail.com
+12	brindha	24-08-04	brindha@gmail.com
+11	aravindh	25-06-03	aravindh@gmail.com
+10	kishore	27-09-03	kishore@gmail.com
+9	harini	23-09-02	harini@gmail.com
+8	gayathri	18-09-01	gayu@gmail.com
+7	abinaya	06-08-01	abinaya@gmail.com
+6	kavitha	16-06-02	kavitha@gmail.com
+5	arun	12-08-02	arun@gmail.com
+4	kavin	07-08-00	kavin@gmail.com
+3	meena	07-05-99	meena@gmail.com
+2	jack	27-05-98	jack@gmail.com
+1	priyanka	30-10-03	priya@gmail.com
+ASC:
+s_id          s_name      DOB        Email
+1	priyanka	30-10-03	priya@gmail.com
+2	jack	27-05-98	jack@gmail.com
+3	meena	07-05-99	meena@gmail.com
+4	kavin	07-08-00	kavin@gmail.com
+5	arun	12-08-02	arun@gmail.com
+6	kavitha	16-06-02	kavitha@gmail.com
+7	abinaya	06-08-01	abinaya@gmail.com
+8	gayathri	18-09-01	gayu@gmail.com
+9	harini	23-09-02	harini@gmail.com
+10	kishore	27-09-03	kishore@gmail.com
+11	aravindh	25-06-03	aravindh@gmail.com
+12	brindha	24-08-04	brindha@gmail.com
+13	kaviya	11-05-03	kaviya@gmail.com
+14	arjun	14-03-01	arjun@gmail.com
+15	prashanth	17-05-98	prashanth@gmail.com
+BOTH ASC AND DESC:
+s_id             s_name
+1	priyanka
+2	jack
+3	meena
+4	kavin
+5	arun
+6	kavitha
+7	abinaya
+8	gayathri
+9	harini
+10	kishore
+11	aravindh
+12	brindha
+13	kaviya
+14	arjun
+DISTINCT:
+c_name
+C#
+JAVA
+PL/SQL
+SQL
+PYTHON
+FULLSTACK
+BOOTSTRAP
+EXCEL
+C++
+AND OPEREATOR:
+c_id        c_name          credits
+101	SQL	   3
+107	SQL	   3
+112	SQL	   3
+OR OPERATOR:
+s_id         s_name       DOB        Email
+1	priyanka	30-10-03	priya@gmail.com
+2	jack	27-05-98	jack@gmail.com
+10	kishore	27-09-03	kishore@gmail.com
+11	aravindh	25-06-03	aravindh@gmail.com
+12	brindha	24-08-04	brindha@gmail.com
+13	kaviya	11-05-03	kaviya@gmail.com
+14	arjun	14-03-01	arjun@gmail.com
+15	prashanth	17-05-98	prashanth@gmail.com
+ BOTH AND / OR OPERATOR:
+s_id         s_name       DOB        Email
+2	jack	27-05-98	jack@gmail.com
+BETWEEN OPERATOR:
+E_id        S_id         C_id           marks      grade
+201	1	101	85	B 
+205	5	105	86	B 
+207	7	107	95	A 
+209	9	109	87	B 
+212	12	112	95	A 
+IN OPERATOR:
+s_id         s_name          DOB        Email
+1	priyanka	30-10-03	priya@gmail.com
+4	kavin	07-08-00	kavin@gmail.com
+NOT IN OPERATOR:
+s_id         s_name          DOB        Email
+2	jack	27-05-98	jack@gmail.com
+3	meena	07-05-99	meena@gmail.com
+5	arun	12-08-02	arun@gmail.com
+6	kavitha	16-06-02	kavitha@gmail.com
+7	abinaya	06-08-01	abinaya@gmail.com
+8	gayathri	18-09-01	gayu@gmail.com
+9	harini	23-09-02	harini@gmail.com
+10	kishore	27-09-03	kishore@gmail.com
+11	aravindh	25-06-03	aravindh@gmail.com
+12	brindha	24-08-04	brindha@gmail.com
+13	kaviya	11-05-03	kaviya@gmail.com
+14	arjun	14-03-01	arjun@gmail.com
+15	prashanth	17-05-98	prashanth@gmail.com
+AGGREGATE FUNCTION:
+SUM:
+1233
+MIN:
+69
+MAX:
+99
+AVG:
+83.8
+COUNT:
+15
+GROUP BY:
+enr_id      marks
+207	95
+209	87
+213	81
+205	86
+210	75
+211	69
+201	95
+215	99
+206	77
+212	95
+214	79
+202	82
+203	80
+204	83
+208	74
+GROUP BY AND HAVING:
+EXAMPLE:1
+E_id        sum(marks)
+205	86
+207	95
+209	87
+212	95
+215	99
+GROUP BY AND HAVING:
+EXAMPLE:2
+Id        marks
+6	77
+11	69
+14	79
+8	74
+10	75
+GROUP BY AND ORDER BY:
+EXAMPLE:3
+Id       marks
+11	69
+8	74
+10	75
+6	77
+14	79
+3	80
+13	81
+2	82
+4	83
+5	86
+9	87
+7	95
+1	95
+12	95
+15	99
+GROUP BY AND ORDER BY:
+EXAMPLE:4
+Id        marks
+102	82
+JOINING TWO TABLES:
+Id             course                  marks
+1	SQL	        95
+2	PL/SQL             82
+3	JAVA	        80
+4	C#	        83
+
+UNION :
+C_id
+69
+74
+75
+77
+79
+80
+81
+82
+85
+86
+87
+95
+99
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+UNION ALL:
+select course_id from courses
+union 
+select marks from enrollments;
+SHOW STUDENTS WITH COURSE AND AMOUNT PAID:
+s_name      c_name      amount
+meena	JAVA	7000
+arjun	JAVA	7000
+kaviya	PYTHON	9000
+prashanth	PL/SQL	10000
+aravindh	EXCEL	4000
+brindha	SQL	8000
+priyanka	SQL	9000
+kavitha	PYTHON	9000
+abinaya	SQL	8000
+harini	PL/SQL	10000
+kishore	BOOTSTRAP4000
+jack	PL/SQL	10000
+arun	C++	7000
+kavin	C#	5000
+EXAMPLE:
+s_name      c_name      amount
+harini	PL/SQL	10000
+jack	PL/SQL	10000
+prashanth	PL/SQL	10000
+kavitha	PYTHON	9000
+priyanka	SQL	9000
+kaviya	PYTHON	9000
+abinaya	SQL	8000
+brindha	SQL	8000
+gayathri	FULLSTACK8000
+meena	JAVA	7000
+arjun	JAVA	7000
+arun	C++	7000
+kavin	C#	5000
+aravindh	EXCEL	4000
+kishore	BOOTSTRAP4000
+PROCEDURE:
+create or replace procedure assign_grades 
+is
+begin
+update enrollments
+set grade =case
+when marks>= 90 then 'A'
+when marks>=80 then 'B'
+when marks>=70 then 'C'
+when marks>=65 then 'D'
+else 'F'
+end;
+end;
+/
+exec assign_grades;
+UPDATE MARKS:
+E-id          s_id          c_id            marks       grade
+204	4	104	57	F 
+TRIGGER:
+
+CREATE OR REPLACE TRIGGER
+trg_assign_grades
+BEFORE INSERT OR UPDATE ON ENROLLMENTS
+FOR EACH ROW
+BEGIN
+ IF :NEW.MARKS >=90 THEN
+    :NEW.GRADE := 'A';
+   ELSIF  :NEW.MARKS >=80 THEN
+    :NEW.GRADE := 'B';
+    ELSIF  :NEW.MARKS >=70 THEN
+    :NEW.GRADE := 'C';
+     ELSIF  :NEW.MARKS >=65 THEN
+    :NEW.GRADE := 'D';
+    ELSE
+    :NEW.GRADE :='F';
+    END IF;
+    END;
+    /
