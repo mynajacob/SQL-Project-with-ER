@@ -27,39 +27,38 @@ foreign key (course_id) references courses(course_id)
 );
 
 INSERTING INTO STUDENTS:
-insert into students(student_id,student_name,DOB,email)
-values(1,'priyanka','30-10-2003','priya@gmail.com');
-insert all 
-into students(student_id,student_name,DOB,email)
-values(2,'jack','27-05-1998','jack@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(3,'meena','07-05-1999','meena@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(4,'kavin','07-08-2000','kavin@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(5,'arun','12-08-2002','arun@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(6,'kavitha','16-06-2002','kavitha@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(7,'abinaya','06-08-2001','abinaya@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(8,'sameer','18-09-2001','sameer@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(9,'harini','23-09-2002','harini@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(10,'kishore','27-09-2003','kishore@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(11,'aravindh','25-06-2003','aravindh@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(12,'brindha','24-08-2004','brindha@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(13,'kaviya','11-05-2003','kaviya@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(14,'arjun','14-03-2001','arjun@gmail.com')
-into students(student_id,student_name,DOB,email)
-values(15,'prashanth','17-05-1998','prashanth@gmail.com')
-select * from dual;
+INSERT ALL
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(1, 'priyanka', TO_DATE('30-10-2003', 'DD-MM-YYYY'), 'priya@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(2, 'jack', TO_DATE('27-05-1998', 'DD-MM-YYYY'), 'jack@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(3, 'meena', TO_DATE('07-05-1999', 'DD-MM-YYYY'), 'meena@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(4, 'kavin', TO_DATE('07-08-2000', 'DD-MM-YYYY'), 'kavin@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(5, 'arun', TO_DATE('12-08-2002', 'DD-MM-YYYY'), 'arun@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(6, 'kavitha', TO_DATE('16-06-2002', 'DD-MM-YYYY'), 'kavitha@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(7, 'abinaya', TO_DATE('06-08-2001', 'DD-MM-YYYY'), 'abinaya@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(8, 'sameer', TO_DATE('18-09-2001', 'DD-MM-YYYY'), 'sameer@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(9, 'harini', TO_DATE('23-09-2002', 'DD-MM-YYYY'), 'harini@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(10, 'kishore', TO_DATE('27-09-2003', 'DD-MM-YYYY'), 'kishore@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(11, 'aravindh', TO_DATE('25-06-2003', 'DD-MM-YYYY'), 'aravindh@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(12, 'brindha', TO_DATE('24-08-2004', 'DD-MM-YYYY'), 'brindha@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(13, 'kaviya', TO_DATE('11-05-2003', 'DD-MM-YYYY'), 'kaviya@gmail.com')
+    INTO students(student_id, student_name, DOB, email)
+    VALUES(14, 'arjun', TO_DATE('14-03-2001', 'DD-MM-YYYY'), 'arjun@gmail.com')
+    INTO students(student_id, student_name, D
 select * from students;
+
 INSERTING INTO COURSES:
 
 insert all
@@ -356,6 +355,7 @@ BEGIN
     END IF;
     END;
     /
+
 update enrollments
 set marks=85
 where student_id=1;
